@@ -1,0 +1,6 @@
+[submodule "miner"]
+	path = miner
+	url = https://github.com/balena-io-playground/miner
+[submodule "packetforwarder"]
+	path = packetforwarder
+	url = git@github.com:PastaGringo/LoRa-GateWay-and-Packet-Forwarder-BalenaApp.git

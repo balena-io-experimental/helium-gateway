@@ -1,0 +1,18 @@
+version: '2'
+volumes:
+    miner-data:
+services:
+  miner:
+    ports:
+        - "44158:44158"
+        - "1680:1680/udp"
+    restart: always
+    environment:
+        - 'REGION_OVERRIDE=EU868'
+    volumes:
+      - 'miner-data:/var/data'
+    build: ./miner
+  packetforwarder:
+    build: ./packetforwarder
+    restart: always
+    privileged: true
